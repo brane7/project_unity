@@ -63,11 +63,7 @@ class TimedSyncData<T> {
         this._data = await this.snycFunc();
     }
 }
-
-
-const ALREADY_FRIEND_REQUEST_REFRESH_INTERVAL = 5; // mins
-export type AlreadyFriendRequests = { invitedList: string[], sentGiftList: string[] };
-
+\\
 
 export class GameData {
     private _playResult: GameResultBase;
