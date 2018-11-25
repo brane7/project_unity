@@ -25,23 +25,7 @@ export class Option {
         });
     }
 
-    apply(optionOrString: Option | string | null) {
-        if (optionOrString === null) return;
-        let option: Option;
-
-        if (typeof optionOrString === 'string') {
-            option = JSON.parse(optionOrString) as Option;
-        } else {
-            option = optionOrString;
-        }
-
-        this.__appling = true;
-
-        this.muteFX = !!option._muteFX;
-        this.muteBGM = !!option._muteBGM;
-
-        this.__appling = false;
-    }
+   
 }
 
 class TimedSyncData<T> {
@@ -61,11 +45,7 @@ class TimedSyncData<T> {
         this._data = await this.snycFunc();
     }
 }
-
-
-const ALREADY_FRIEND_REQUEST_REFRESH_INTERVAL = 5; // mins
-export type AlreadyFriendRequests = { invitedList: string[], sentGiftList: string[] };
-
+\\
 
 export class GameData {
     private _playResult: GameResultBase;
