@@ -1,25 +1,7 @@
 
 
 export class Option {
-    private _muteFX: boolean = false;
-    private _muteBGM: boolean = false;
-
-    private __appling: boolean = false;
-    private readonly __muteEventListener = new LiteEvent<boolean>();
-    private readonly __muteBGMEventListener = new LiteEvent<boolean>();
-
-    public get muteFXListener() { return this.__muteEventListener.expose(); }
-    public get muteFX() { return this._muteFX; }
-    public set muteFX(flag: boolean) {
-        if (this._muteFX !== flag) {
-            this._muteFX = flag;
-
-            this.__muteEventListener.emit(flag);
-
-            this.onOptionChanged();
-        }
-    }
-
+   
     public get muteBGMListener() { return this.__muteBGMEventListener.expose(); }
     public get muteBGM() { return this._muteBGM; }
     public set muteBGM(flag: boolean) {
