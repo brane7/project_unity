@@ -1,9 +1,4 @@
-import { Time } from "../core/Time";
-import { TimeUnit } from "../core/TimeUnit";
-import { ArrayUtil } from "../core/Util";
-import { LiteEvent } from "../core/EventListener";
-import Packet from "../packet/Packet";
-import { Def } from "../gameData/Def";
+
 
 export class Option {
     private _muteFX: boolean = false;
